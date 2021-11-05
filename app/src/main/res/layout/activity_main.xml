@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,48 +18,75 @@
         android:textSize="34sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/textInput1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:hint="Inserte Numero"
-        android:inputType="number" />
+        android:inputType="number|numberDecimal" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/textInput2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:hint="Inserte Numero"
-        android:inputType="number" />
+        android:inputType="number|numberDecimal" />
 
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="match_parent"
+    <TableLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="+" />
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/button_subs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="-" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/button_mult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="X" />
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="175dp"
+                android:layout_height="114dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="+"
+                android:textSize="50sp" />
 
-    <Button
-        android:id="@+id/button_div"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="/" />
+            <Button
+                android:id="@+id/button_subs"
+                android:layout_width="175dp"
+                android:layout_height="114dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="50sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_mult"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="x"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button_div"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="/"
+                android:textSize="50sp" />
+        </TableRow>
+
+    </TableLayout>
+
 </LinearLayout>
